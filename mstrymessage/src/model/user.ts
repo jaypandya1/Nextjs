@@ -71,3 +71,11 @@ const MessageSchema: Schema<Message> = new Schema({
            },
            Messages:[MessageSchema]
  })
+
+
+
+
+ const UserModel = (mongoose.models.user as mongoose.Model<User>) || mongoose.model<User>("user",UserSchema)
+
+
+ export default UserModel;
